@@ -26,7 +26,7 @@ O handbook em inglês é a fonte da verdade: é curto e econômico em tokens, pa
 | Frameworks | Spring Boot, Flask |
 | Práticas | APIs REST, Git, Markdown |
 | Transversal | Segurança, desempenho, impacto |
-| IA | Skills do Claude Code que aplicam o handbook |
+| IA | Agentes e skills do Claude Code que aplicam o handbook |
 | Depois | Bibliotecas de cada linguagem, design base |
 
 Fora do escopo de propósito: regras de formatação que os formatters já aplicam, tutoriais de linguagem e opiniões "framework X vs Y". O raciocínio completo está no [ADR 0001](docs/adr/0001-record-phase-0-decisions.md).
@@ -37,9 +37,11 @@ Fora do escopo de propósito: regras de formatação que os formatters já aplic
 handbook/
   en/          fonte da verdade, carregada pelos assistentes de IA
   pt-BR/       espelho para leitura humana (mesmos arquivos, mesmos IDs)
-ai/
-  skills/      skills do Claude Code que aplicam o handbook
-  guides/      como usar assistentes de IA com o handbook
+.claude/
+  agents/      o time de revisão: seis revisores só leitura e um implementador
+  skills/      skills que aplicam o handbook (team-review, perf-audit, ...)
+  commands/    /review, o ponto de entrada do time
+ai/guides/     como usar assistentes de IA com o handbook
 examples/      código ruim / bom executável, testado no CI
 design/        reservado para o design base
 docs/adr/      registros de decisões de arquitetura deste repositório
@@ -56,15 +58,19 @@ scripts/       checagens de paridade, IDs de regra e atribuição
 
 Os IDs seguem `ESCOPO-LENTE-NNN` e nunca mudam de significado. Veja o [índice do handbook](handbook/pt-BR/index.md) e o [modelo de regra](handbook/pt-BR/_template.md).
 
+## Time de revisão com IA
+
+Abra este repositório no Claude Code e rode `/review`. Um detector de stack escolhe os arquivos do handbook que se aplicam, e revisores de código, segurança, desempenho, APIs REST e frontend rodam em paralelo e devolvem um relatório único, em que cada achado cita o ID de uma regra. Os revisores só leem; o implementador só aplica achados que você aprovar. Veja [o guia de IA](ai/guides/README.md).
+
 ## Roadmap
 
 | Fase | Conteúdo | Status |
 | --- | --- | --- |
 | 0 | Regras e brainstorm de escopo | Concluída |
-| 1 | Esqueleto, governança, CI, site de documentação | Em andamento |
+| 1 | Esqueleto, governança, CI, site de documentação | Concluída |
 | 2 | Lentes do núcleo e as seis linguagens, com exemplos executáveis | Planejada |
 | 3 | Spring Boot, Flask, REST, Git, Markdown | Planejada |
-| 4 | Skills de IA, guias de uso, plugin instalável | Planejada |
+| 4 | Time de revisão com IA: agentes e skills (base pronta), plugin instalável | Em andamento |
 | 5 | Regras de bibliotecas | Planejada |
 | 6 | Design base | Planejada |
 
@@ -78,7 +84,7 @@ make check
 
 ## Licenças
 
-- Código (scripts, exemplos, skills): [MIT](LICENSE).
+- Código (scripts, exemplos, agentes, skills): [MIT](LICENSE).
 - Texto do handbook e documentação: [CC BY 4.0](LICENSE-CC-BY-4.0). Qualquer pessoa pode copiar, traduzir e adaptar, inclusive comercialmente, desde que dê o crédito à fonte.
 
 ## Contribuindo
