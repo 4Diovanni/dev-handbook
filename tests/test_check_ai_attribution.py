@@ -40,3 +40,8 @@ def test_message_file_rejects_trailer(tmp_path):
     msg = tmp_path / "COMMIT_EDITMSG"
     msg.write_text("feat: ok\n\nCo-Authored-By: Claude <noreply@anthropic.com>\n", encoding="utf-8")
     assert main(["--message-file", str(msg)]) == 1
+
+
+def test_reported_line_number_points_at_the_trailer():
+    [hit] = find_violations("feat: x\n\nCo-Authored-By: Claude <a@b.c>\n")
+    assert hit.startswith("line 3:")

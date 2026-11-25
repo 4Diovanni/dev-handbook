@@ -23,8 +23,8 @@ from pathlib import Path
 AI_TOOLS = r"(claude|anthropic|copilot|chatgpt|openai|gemini|cursor|codeium|tabnine|devin|aider)"
 
 PATTERNS: dict[str, re.Pattern[str]] = {
-    "AI co-author trailer": re.compile(rf"^\s*co-authored-by:.*{AI_TOOLS}", re.I | re.M),
-    "AI session trailer": re.compile(rf"^\s*{AI_TOOLS}[\w-]*-session:", re.I | re.M),
+    "AI co-author trailer": re.compile(rf"^[ \t]*co-authored-by:.*{AI_TOOLS}", re.I | re.M),
+    "AI session trailer": re.compile(rf"^[ \t]*{AI_TOOLS}[\w-]*-session:", re.I | re.M),
     "AI session link": re.compile(rf"https?://\S*{AI_TOOLS}\S*/(code/)?session", re.I),
     "generated-with banner": re.compile(rf"generated\s+(with|by)\s+\[?{AI_TOOLS}", re.I),
 }
