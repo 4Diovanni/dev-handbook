@@ -2,6 +2,8 @@ name: CI
 
 on:
   pull_request:
+    # "edited" re-runs the checks when the PR description changes.
+    types: [opened, synchronize, reopened, edited]
   push:
     branches: [main]
 
