@@ -55,6 +55,8 @@ jobs:
         run: python scripts/check_parity.py
       - name: Rule IDs
         run: python scripts/check_rule_ids.py
+      - name: Agents and skills
+        run: python scripts/check_claude_config.py
 
   attribution:
     name: No AI attribution
