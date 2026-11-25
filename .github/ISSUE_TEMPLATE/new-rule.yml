@@ -1,0 +1,49 @@
+name: New rule
+description: Propose a new rule for the handbook
+labels: [rule]
+body:
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Scope
+      options: [CORE, JAVA, PY, JS, TS, HTML, CSS, SPRING, FLASK, REST, GIT, MD, LIB]
+    validations:
+      required: true
+  - type: dropdown
+    id: lens
+    attributes:
+      label: Lens
+      options: [SEC (security), PERF (performance), MAINT (maintainability), IMPACT (adoption cost and risk)]
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Level
+      options: [MUST, SHOULD, AVOID]
+    validations:
+      required: true
+  - type: input
+    id: rule
+    attributes:
+      label: Rule
+      description: One imperative sentence.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: The technical reason, in at most two sentences.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Bad and good example
+      render: text
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: Official docs, OWASP, PEP, JLS, RFC.

@@ -1,0 +1,21 @@
+name: New language or framework
+description: Propose a new module for the handbook
+labels: [scope]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Language, framework or library
+    validations:
+      required: true
+  - type: input
+    id: prefix
+    attributes:
+      label: Proposed scope prefix
+      placeholder: KOTLIN
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs in the handbook
+    validations:
+      required: true

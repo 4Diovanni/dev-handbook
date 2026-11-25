@@ -1,0 +1,21 @@
+name: Correction
+description: Report a wrong, outdated or unclear rule
+labels: [correction]
+body:
+  - type: input
+    id: rule-id
+    attributes:
+      label: Rule ID
+      placeholder: PY-PERF-001
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Source

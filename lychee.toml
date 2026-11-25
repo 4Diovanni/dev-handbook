@@ -1,0 +1,11 @@
+# Link checker configuration.
+max_retries = 3
+accept = [200, 206, 429]
+exclude = [
+  # Published only after the first Pages deploy.
+  '^https://4diovanni\.github\.io/dev-handbook',
+  # Badges and workflow pages appear after the first workflow run.
+  '^https://github\.com/4Diovanni/dev-handbook/actions',
+  '^https://img\.shields\.io',
+]
+exclude_path = ["site", "node_modules"]
