@@ -1,6 +1,6 @@
 # AI guide
 
-How the dev-handbook review team works in Claude Code. The agents and skills live in [`.claude/`](../.claude).
+How the dev-handbook review team works in Claude Code. The agents and skills live in [`.claude/`](../../.claude).
 
 ## Use it
 
@@ -38,4 +38,4 @@ The main session orchestrates: subagents cannot start other subagents, so the `t
 
 ## Imported skills
 
-External skill packs (for example superpowers) are allowed only after the import policy in [ADR 0002](../docs/adr/0002-agent-team-and-skills.md): compatible license, pinned version, read in full, conflicts with the handbook documented, credit to the author. Each one is recorded in `ai/third-party.md`.
+External skill packs (for example superpowers) are allowed only after the import policy in [ADR 0002](../../docs/adr/0002-agent-team-and-skills.md): compatible license, pinned version, read in full, conflicts with the handbook documented, credit to the author. Each one is recorded in `ai/third-party.md`.
