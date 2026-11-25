@@ -26,7 +26,7 @@ The English handbook is the source of truth: it is short and token-efficient, so
 | Frameworks | Spring Boot, Flask |
 | Practices | REST APIs, Git, Markdown |
 | Cross-cutting | Security, performance, impact |
-| AI | Claude Code skills that apply the handbook |
+| AI | Claude Code agents and skills that apply the handbook |
 | Later | Per-language libraries, design foundations |
 
 Out of scope on purpose: formatting rules that formatters already enforce, language tutorials, and "framework X vs Y" opinions. The full reasoning is in [ADR 0001](docs/adr/0001-record-phase-0-decisions.md).
@@ -37,9 +37,11 @@ Out of scope on purpose: formatting rules that formatters already enforce, langu
 handbook/
   en/          source of truth, loaded by AI assistants
   pt-BR/       mirror for human reading (same files, same rule IDs)
-ai/
-  skills/      Claude Code skills that apply the handbook
-  guides/      how to use AI assistants with the handbook
+.claude/
+  agents/      the review team: six read-only reviewers and one implementer
+  skills/      skills that apply the handbook (team-review, perf-audit, ...)
+  commands/    /review, the entry point for the team
+ai/guides/     how to use AI assistants with the handbook
 examples/      runnable bad / good code, tested in CI
 design/        reserved for design foundations
 docs/adr/      architecture decision records for this repository
@@ -56,15 +58,19 @@ scripts/       parity, rule ID and attribution checks
 
 IDs follow `SCOPE-LENS-NNN` and never change meaning. See the [handbook index](handbook/en/index.md) and the [rule template](handbook/en/_template.md).
 
+## AI review team
+
+Open this repository in Claude Code and run `/review`. A stack detector picks the handbook files that apply, then reviewers for code, security, performance, REST APIs and frontend run in parallel and return one report where every finding cites a rule ID. Reviewers are read-only; the implementer only applies findings you approve. See [the AI guide](ai/guides/README.md).
+
 ## Roadmap
 
 | Phase | Content | Status |
 | --- | --- | --- |
 | 0 | Rules and scope brainstorm | Done |
-| 1 | Skeleton, governance, CI, docs site | In progress |
+| 1 | Skeleton, governance, CI, docs site | Done |
 | 2 | Core lenses and the six languages, with runnable examples | Planned |
 | 3 | Spring Boot, Flask, REST, Git, Markdown | Planned |
-| 4 | AI skills, usage guides, installable plugin | Planned |
+| 4 | AI review team: agents and skills (base done), installable plugin | In progress |
 | 5 | Library rules | Planned |
 | 6 | Design foundations | Planned |
 
@@ -78,7 +84,7 @@ make check
 
 ## Licensing
 
-- Code (scripts, examples, skills): [MIT](LICENSE).
+- Code (scripts, examples, agents, skills): [MIT](LICENSE).
 - Handbook text and documentation: [CC BY 4.0](LICENSE-CC-BY-4.0). You can copy, translate and adapt it, including commercially, as long as you credit the source.
 
 ## Contributing
