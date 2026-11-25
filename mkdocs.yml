@@ -1,0 +1,52 @@
+site_name: dev-handbook
+site_description: Software engineering best practices for people and AI coding assistants.
+site_url: https://4diovanni.github.io/dev-handbook/
+repo_url: https://github.com/4Diovanni/dev-handbook
+repo_name: 4Diovanni/dev-handbook
+edit_uri: edit/main/handbook/
+docs_dir: handbook
+strict: true
+
+exclude_docs: |
+  retired-ids.txt
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Light mode
+
+plugins:
+  - search:
+      lang: [en, pt]
+  - i18n:
+      docs_structure: folder
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: pt-BR
+          name: Português (Brasil)
+          build: true
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.superfences
