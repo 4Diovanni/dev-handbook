@@ -1,0 +1,4 @@
+#!/bin/sh
+# Rejects commit messages that carry AI-assistant attribution.
+# Enable once per clone with: git config core.hooksPath .githooks
+exec python3 "$(git rev-parse --show-toplevel)/scripts/check_ai_attribution.py" --message-file "$1"
