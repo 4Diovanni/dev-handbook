@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.2.0](https://github.com/4Diovanni/dev-handbook/compare/v0.1.0...v0.2.0) (2026-11-27)
+
+
+### Features
+
+* add JavaScript, TypeScript, HTML and CSS rules ([#15](https://github.com/4Diovanni/dev-handbook/issues/15)) ([e5d3ed3](https://github.com/4Diovanni/dev-handbook/commit/e5d3ed3750fd5fc9320c9c7871ca6c05df8e7ee4))
+* add runnable bad / good example pairs ([#16](https://github.com/4Diovanni/dev-handbook/issues/16)) ([aface4a](https://github.com/4Diovanni/dev-handbook/commit/aface4aeb8035a796fb52404bff9777dc6f24007))
+* add the core, Python and Java rules pilot ([e89cded](https://github.com/4Diovanni/dev-handbook/commit/e89cded0eaafdd52c7f68787cbee411f17d600b7))
+* **core:** add security, performance and impact rules ([bbaf2cc](https://github.com/4Diovanni/dev-handbook/commit/bbaf2cc462f7a354dcd323146deef84a7e2199bb))
+* **java:** add security, performance and maintainability rules ([a1933cf](https://github.com/4Diovanni/dev-handbook/commit/a1933cfceb0c5ef5fa622a35116fbd029ce12381))
+* **python:** add security, performance and maintainability rules ([69f5be6](https://github.com/4Diovanni/dev-handbook/commit/69f5be68d18b4b3978bd6f635abaac15282b1e48))
+
+
+### Handbook and docs
+
+* fix the docs badge link in the README ([e4b5bc9](https://github.com/4Diovanni/dev-handbook/commit/e4b5bc950defc0dbe769fbbe4f07bf8648f53581))
+* mark phase 2 as in progress with the rules pilot ([c12ea21](https://github.com/4Diovanni/dev-handbook/commit/c12ea2147d6b55205629b4f57d093ad1bced93aa))
+
 ## 0.1.0 (2026-11-25)
 
 
