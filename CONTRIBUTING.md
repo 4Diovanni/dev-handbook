@@ -26,6 +26,7 @@ The `commit-msg` hook rejects AI-assistant attribution (co-author trailers, sess
 - Add the same rule, with the same ID and in the same position, to `handbook/pt-BR/`.
 - Rule IDs are permanent. To remove a rule, delete it from both locales and add its ID to `handbook/retired-ids.txt`. Removing a rule or changing its meaning is a breaking change (`feat!:`).
 - Never put secrets, tokens or personal data in examples.
+- For a performance rule, consider adding a runnable bad / good pair under `examples/` (see [examples/README.md](examples/README.md)).
 
 ## Checks
 
@@ -46,4 +47,4 @@ make check
 
 Ative os hooks uma vez por clone com `git config core.hooksPath .githooks`. O hook `commit-msg` bloqueia atribuição de assistentes de IA, e o CI repete a checagem.
 
-Toda regra nasce em `handbook/en/` e é espelhada em `handbook/pt-BR/` com o mesmo ID e na mesma posição. IDs são permanentes: regra removida vai para `handbook/retired-ids.txt`.
+Toda regra nasce em `handbook/en/` e é espelhada em `handbook/pt-BR/` com o mesmo ID e na mesma posição. IDs são permanentes: regra removida vai para `handbook/retired-ids.txt`. Regras de desempenho podem ganhar um par ruim / bom executável em `examples/`.
