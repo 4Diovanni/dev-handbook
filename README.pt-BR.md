@@ -68,7 +68,7 @@ Abra este repositório no Claude Code e rode `/review`. Um detector de stack esc
 | --- | --- | --- |
 | 0 | Regras e brainstorm de escopo | Concluída |
 | 1 | Esqueleto, governança, CI, site de documentação | Concluída |
-| 2 | Lentes do núcleo e as seis linguagens, com exemplos executáveis | Em andamento (piloto: core, Python, Java) |
+| 2 | Lentes do núcleo e as seis linguagens, com exemplos executáveis | Em andamento: regras prontas, exemplos executáveis a seguir |
 | 3 | Spring Boot, Flask, REST, Git, Markdown | Planejada |
 | 4 | Time de revisão com IA: agentes e skills (base pronta), plugin instalável | Em andamento |
 | 5 | Regras de bibliotecas | Planejada |
