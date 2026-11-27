@@ -68,7 +68,7 @@ Open this repository in Claude Code and run `/review`. A stack detector picks th
 | --- | --- | --- |
 | 0 | Rules and scope brainstorm | Done |
 | 1 | Skeleton, governance, CI, docs site | Done |
-| 2 | Core lenses and the six languages, with runnable examples | In progress (pilot: core, Python, Java) |
+| 2 | Core lenses and the six languages, with runnable examples | In progress: rules done, runnable examples next |
 | 3 | Spring Boot, Flask, REST, Git, Markdown | Planned |
 | 4 | AI review team: agents and skills (base done), installable plugin | In progress |
 | 5 | Library rules | Planned |
