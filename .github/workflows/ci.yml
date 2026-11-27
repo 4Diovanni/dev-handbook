@@ -58,6 +58,24 @@ jobs:
       - name: Agents and skills
         run: python scripts/check_claude_config.py
 
+  examples:
+    name: Examples
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run bad / good pairs
+        run: python scripts/check_examples.py
+
   attribution:
     name: No AI attribution
     runs-on: ubuntu-latest

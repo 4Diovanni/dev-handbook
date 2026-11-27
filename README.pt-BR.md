@@ -42,7 +42,7 @@ handbook/
   skills/      skills que aplicam o handbook (team-review, perf-audit, ...)
   commands/    /review, o ponto de entrada do time
 ai/guides/     como usar assistentes de IA com o handbook
-examples/      código ruim / bom executável, testado no CI
+examples/      pares ruim / bom executáveis que precisam imprimir o mesmo resultado
 design/        reservado para o design base
 docs/adr/      registros de decisões de arquitetura deste repositório
 scripts/       checagens de paridade, IDs de regra e atribuição
@@ -68,7 +68,7 @@ Abra este repositório no Claude Code e rode `/review`. Um detector de stack esc
 | --- | --- | --- |
 | 0 | Regras e brainstorm de escopo | Concluída |
 | 1 | Esqueleto, governança, CI, site de documentação | Concluída |
-| 2 | Lentes do núcleo e as seis linguagens, com exemplos executáveis | Em andamento: regras prontas, exemplos executáveis a seguir |
+| 2 | Lentes do núcleo e as seis linguagens, com exemplos executáveis | Concluída |
 | 3 | Spring Boot, Flask, REST, Git, Markdown | Planejada |
 | 4 | Time de revisão com IA: agentes e skills (base pronta), plugin instalável | Em andamento |
 | 5 | Regras de bibliotecas | Planejada |

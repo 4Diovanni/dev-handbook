@@ -42,7 +42,7 @@ handbook/
   skills/      skills that apply the handbook (team-review, perf-audit, ...)
   commands/    /review, the entry point for the team
 ai/guides/     how to use AI assistants with the handbook
-examples/      runnable bad / good code, tested in CI
+examples/      runnable bad / good pairs that must print the same result
 design/        reserved for design foundations
 docs/adr/      architecture decision records for this repository
 scripts/       parity, rule ID and attribution checks
@@ -68,7 +68,7 @@ Open this repository in Claude Code and run `/review`. A stack detector picks th
 | --- | --- | --- |
 | 0 | Rules and scope brainstorm | Done |
 | 1 | Skeleton, governance, CI, docs site | Done |
-| 2 | Core lenses and the six languages, with runnable examples | In progress: rules done, runnable examples next |
+| 2 | Core lenses and the six languages, with runnable examples | Done |
 | 3 | Spring Boot, Flask, REST, Git, Markdown | Planned |
 | 4 | AI review team: agents and skills (base done), installable plugin | In progress |
 | 5 | Library rules | Planned |

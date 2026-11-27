@@ -1,8 +1,8 @@
 PYTHON ?= python3
 
-.PHONY: check test lint parity ids claude attribution docs
+.PHONY: check test lint parity ids claude attribution examples docs
 
-check: lint test parity ids claude attribution
+check: lint test parity ids claude attribution examples
 
 test:
 	$(PYTHON) -m pytest
@@ -22,6 +22,9 @@ claude:
 
 attribution:
 	$(PYTHON) scripts/check_ai_attribution.py --files
+
+examples:
+	$(PYTHON) scripts/check_examples.py
 
 docs:
 	mkdocs serve

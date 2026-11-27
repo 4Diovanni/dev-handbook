@@ -13,4 +13,4 @@ src = ["scripts", "tests"]
 select = ["E", "F", "W", "I", "B", "UP", "SIM"]
 
 [tool.ruff.lint.isort]
-known-first-party = ["handbook_lib", "check_parity", "check_rule_ids", "check_ai_attribution"]
+known-first-party = ["handbook_lib", "check_parity", "check_rule_ids", "check_ai_attribution", "check_examples"]
