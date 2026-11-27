@@ -1,7 +1,7 @@
 # dev-handbook
 
 [![CI](https://github.com/4Diovanni/dev-handbook/actions/workflows/ci.yml/badge.svg)](https://github.com/4Diovanni/dev-handbook/actions/workflows/ci.yml)
-[![Docs](https://github.com/4Diovanni/dev-handbook/actions/workflows/pages.yml/badge.svg)]([https://4diovanni.github.io/dev-handbook/](https://4diovanni.github.io/dev-handbook/))
+[![Docs](https://github.com/4Diovanni/dev-handbook/actions/workflows/pages.yml/badge.svg)](https://4diovanni.github.io/dev-handbook/)
 [![Code: MIT](https://img.shields.io/badge/code-MIT-blue.svg)](LICENSE)
 [![Content: CC BY 4.0](https://img.shields.io/badge/content-CC%20BY%204.0-lightgrey.svg)](LICENSE-CC-BY-4.0)
 
@@ -68,7 +68,7 @@ Open this repository in Claude Code and run `/review`. A stack detector picks th
 | --- | --- | --- |
 | 0 | Rules and scope brainstorm | Done |
 | 1 | Skeleton, governance, CI, docs site | Done |
-| 2 | Core lenses and the six languages, with runnable examples | Planned |
+| 2 | Core lenses and the six languages, with runnable examples | In progress (pilot: core, Python, Java) |
 | 3 | Spring Boot, Flask, REST, Git, Markdown | Planned |
 | 4 | AI review team: agents and skills (base done), installable plugin | In progress |
 | 5 | Library rules | Planned |
